@@ -11,9 +11,17 @@ puts "Sum total using a loop: #{total}"
 
 # With recursion: 
 #
-#
-# total = sum(upper_limit)
-# puts "Sum total using recursion: #{total}"
+total = 0
+upper_limit = 25
+
+# 25 + 24 + 23 + 22 + 21 ... + 3 + 2 + 1 + 0
+def sum(n)
+  return 0 if n == 0   # base case
+  return n + sum(n-1)
+end
+
+total = sum(upper_limit)
+puts "Sum total using recursion: #{total}"
 
 
 
