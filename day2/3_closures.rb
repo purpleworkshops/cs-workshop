@@ -1,13 +1,13 @@
 # Fix this code 
-# 
-def greet(name)
-  
-  def play_lottery
-    puts "#{name}, your lucky number is 21."
-  end
-
+#
+play_lottery = lambda do  # closure
+  puts "your lucky number is #{favorite_number}."
+end
+favorite_number = 99
+ 
+def greet(name, x)
   puts "Hello, #{name}"
-  play_lottery.call()
+  x.call()
 end
 
-greet("Jeff")
+greet("Jeff", play_lottery)

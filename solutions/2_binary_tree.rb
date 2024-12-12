@@ -84,9 +84,9 @@ class BinaryTree
 
   def traverse(node = nil)
     return if node.nil?
+    traverse(node.right)
     puts node.data
     traverse(node.left)
-    traverse(node.right)
   end
   
 end
