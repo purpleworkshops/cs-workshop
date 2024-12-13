@@ -9,8 +9,10 @@ end
 days = %w(Monday Tuesday Wednesday Thursday Friday Saturday Sunday)
 months = %w(Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec)
 
+display_words(days)
+
 t1 = Thread.new { display_words(days) }
 t2 = Thread.new { display_words(months) }
 
-t1.join
+t1.join   # synchronous "blocking" call
 t2.join
